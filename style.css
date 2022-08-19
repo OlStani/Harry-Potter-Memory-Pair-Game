@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./img/hp-pattern.png);
+}
+
+img {
+    display: block;
+    max-width: 200px;
+    border-radius: 15px;
+    background-color: aliceblue;
+}
+
+header {
+    font-size: 50px;
+}
+
+span {
+    display: block;
+    text-align: center;
+    color: goldenrod
+}
+
+.boardWrapper {
+    margin: 20px auto;
+    max-width: 1200px;
+    display: grid;
+    gap: 10%;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    perspective: 1000px;
+}
+
+.cardWrapper {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.cardBack {
+    position: absolute;
+}
+
+.cardBack,
+.cardFront {
+    backface-visibility: hidden;
+}
+
+.flippedCard {
+    transform: rotateY(180deg);
+}
