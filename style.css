@@ -12,6 +12,9 @@ img {
     border-radius: 15px;
     background-color: aliceblue;
 }
+img:hover{
+    cursor: pointer;
+}
 header {
     width: 100%;
     font-size: 50px;
