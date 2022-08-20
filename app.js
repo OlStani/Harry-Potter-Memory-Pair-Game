@@ -40,7 +40,6 @@ function start() {
 let firstCard = null
 let coincidenceCouter = 0
 
-
 function flipCard({ target }) {
     if (!target.closest('.card')) return
     if (target === firstCard) return
@@ -63,9 +62,7 @@ function flipCard({ target }) {
             if (coincidenceCouter === cards.length / 2) {
                 setTimeout(() => alert('You win'), 1200)
                 setTimeout(() => location.href = location.href, 1300)
-
             }
-            console.log('coincidenceCouter: ', coincidenceCouter);
             board.removeEventListener('click', flipCard)
         } else {
             setTimeout(() => {
